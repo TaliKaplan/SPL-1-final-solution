@@ -25,7 +25,7 @@ bool Volunteer::isBusy() const {
 // CollectorVolunteer
 // rule of 3 unnecessary - we don't own resources.
 
-CollectorVolunteer::CollectorVolunteer(int id, string name, int coolDown): Volunteer(id,name),coolDown(coolDown),timeLeft(coolDown) {}
+CollectorVolunteer::CollectorVolunteer(int id, const string &name, int coolDown): Volunteer(id,name),coolDown(coolDown),timeLeft(coolDown) {}
 
 CollectorVolunteer *CollectorVolunteer::clone() const {
     return new CollectorVolunteer(*this);
@@ -95,7 +95,7 @@ void CollectorVolunteer::step() {
 // LimitedCollectorVolunteer
 // rule of 3 unnecessary - we don't own resources.
 
-LimitedCollectorVolunteer::LimitedCollectorVolunteer(int id, string name, int coolDown ,int maxOrders): CollectorVolunteer(id,name,coolDown), maxOrders(maxOrders), ordersLeft(maxOrders) {}
+LimitedCollectorVolunteer::LimitedCollectorVolunteer(int id, const string &name, int coolDown ,int maxOrders): CollectorVolunteer(id,name,coolDown), maxOrders(maxOrders), ordersLeft(maxOrders) {}
 
 LimitedCollectorVolunteer *LimitedCollectorVolunteer::clone() const {
     return new LimitedCollectorVolunteer(*this);
@@ -145,7 +145,7 @@ string LimitedCollectorVolunteer::toString() const {
 // DriverVolunteer
 // rule of 3 unnecessary - we don't own resources.
 
-DriverVolunteer::DriverVolunteer(int id, string name, int maxDistance, int distancePerStep): Volunteer(id,name),maxDistance(maxDistance),distancePerStep(distancePerStep),distanceLeft(distancePerStep) {}
+DriverVolunteer::DriverVolunteer(int id, const string &name, int maxDistance, int distancePerStep): Volunteer(id,name),maxDistance(maxDistance),distancePerStep(distancePerStep),distanceLeft(distancePerStep) {}
 
 DriverVolunteer *DriverVolunteer::clone() const {
     return new DriverVolunteer(*this);

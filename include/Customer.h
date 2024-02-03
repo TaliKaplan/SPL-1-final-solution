@@ -21,7 +21,7 @@ class Customer {
         int getOrdersLeft() const;
 
         virtual Customer *clone() const = 0; // Return a copy of the customer
-	virtual ~Customer()=default;
+	    virtual ~Customer()=default;
 
         
     private:
@@ -35,7 +35,7 @@ class Customer {
 
 class SoldierCustomer: public Customer {
     public:
-        SoldierCustomer(int id, string name, int locationDistance, int maxOrders);
+        SoldierCustomer(int id, const string &name, int locationDistance, int maxOrders);
         SoldierCustomer *clone() const override;
     
     private:
@@ -44,7 +44,7 @@ class SoldierCustomer: public Customer {
 
 class CivilianCustomer: public Customer {
     public:
-        CivilianCustomer(int id, string name, int locationDistance, int maxOrders);
+        CivilianCustomer(int id, const string &name, int locationDistance, int maxOrders);
         CivilianCustomer *clone() const override;
     
     private:

@@ -46,7 +46,7 @@ int Customer::addOrder(int orderId) {
 // SoldierCustomer
 // rule of 3 unnecessary - we don't own resources.
 
-SoldierCustomer::SoldierCustomer(int id, string name, int locationDistance, int maxOrders): Customer(id,name,locationDistance,maxOrders) {}
+SoldierCustomer::SoldierCustomer(int id, const string &name, int locationDistance, int maxOrders): Customer(id,name,locationDistance,maxOrders) {}
 
 SoldierCustomer *SoldierCustomer::clone() const {
     return new SoldierCustomer(*this);
@@ -55,7 +55,7 @@ SoldierCustomer *SoldierCustomer::clone() const {
 // CivilianCustomer
 // rule of 3 unnecessary - we don't own resources.
 
-CivilianCustomer::CivilianCustomer(int id, string name, int locationDistance, int maxOrders): Customer(id,name,locationDistance,maxOrders) {}
+CivilianCustomer::CivilianCustomer(int id, const string &name, int locationDistance, int maxOrders): Customer(id,name,locationDistance,maxOrders) {}
 
 CivilianCustomer *CivilianCustomer::clone() const {
     return new CivilianCustomer(*this);
