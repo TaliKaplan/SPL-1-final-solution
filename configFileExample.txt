@@ -1,0 +1,10 @@
+volunteer Avi collector 2
+volunteer Benny collector 3
+volunteer Chris limited_collector 1 5
+
+volunteer Ahron driver 10 3
+volunteer Brian driver 5 2
+volunteer Carlos limited_driver 15 4 3
+
+customer Anna civilian 2 2
+customer Belinda soldier 5 1
